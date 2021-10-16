@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "./static/js/main.94b27e8d.chunk.js",
+    "main.js.map": "./static/js/main.94b27e8d.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.84cb99ee.js",
+    "runtime-main.js.map": "./static/js/runtime-main.84cb99ee.js.map",
+    "static/js/2.9be18c6e.chunk.js": "./static/js/2.9be18c6e.chunk.js",
+    "static/js/2.9be18c6e.chunk.js.map": "./static/js/2.9be18c6e.chunk.js.map",
+    "static/js/3.0c50b594.chunk.js": "./static/js/3.0c50b594.chunk.js",
+    "static/js/3.0c50b594.chunk.js.map": "./static/js/3.0c50b594.chunk.js.map",
+    "index.html": "./index.html",
+    "static/js/2.9be18c6e.chunk.js.LICENSE.txt": "./static/js/2.9be18c6e.chunk.js.LICENSE.txt",
+    "static/media/360.c2d53a3e.png": "./static/media/360.c2d53a3e.png",
+    "static/media/brookliving.5f187326.png": "./static/media/brookliving.5f187326.png",
+    "static/media/caco.a47715b8.jpg": "./static/media/caco.a47715b8.jpg",
+    "static/media/iam.1e188b50.png": "./static/media/iam.1e188b50.png",
+    "static/media/lungmei.ac5c90a0.png": "./static/media/lungmei.ac5c90a0.png",
+    "static/media/maili.aa8e70f6.PNG": "./static/media/maili.aa8e70f6.PNG",
+    "static/media/notion.2a5b61e8.png": "./static/media/notion.2a5b61e8.png",
+    "static/media/opmm.d60948af.png": "./static/media/opmm.d60948af.png",
+    "static/media/resume.8ae3265e.png": "./static/media/resume.8ae3265e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84cb99ee.js",
+    "static/js/2.9be18c6e.chunk.js",
+    "static/js/main.94b27e8d.chunk.js"
+  ]
+}
