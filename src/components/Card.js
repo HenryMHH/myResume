@@ -1,27 +1,12 @@
 import React, { useContext, useEffect } from 'react'
 import styled from 'styled-components'
-import {
-	Link,
-	Divider,
-	Box,
-	List,
-	ListIcon,
-	ListItem,
-	Text,
-	Modal,
-	ModalOverlay,
-	ModalContent,
-	ModalHeader,
-	ModalFooter,
-	ModalBody,
-	ModalCloseButton,
-	useDisclosure,
-	Button,
-	Image,
-} from '@chakra-ui/react'
+import { Link, Divider, Box, List, ListIcon, ListItem, Text, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton, useDisclosure, Image } from '@chakra-ui/react'
 import { MdCheckCircle } from 'react-icons/md'
 import { FiExternalLink } from 'react-icons/fi'
 import { modalOpenContext } from '../context/modalOpenContext'
+import { localStorageGetter, readStatusManager } from '../utils/readStatus'
+import { AiFillCheckCircle } from 'react-icons/ai'
+import { GiCancel } from 'react-icons/gi'
 
 const CardBox = styled(Box)`
 	border-radius: 15px;
@@ -45,6 +30,7 @@ export const MemoedCard = function Card({ item, index, type }) {
 	useEffect(() => {
 		if (modalState.type && modalState.index >= 0) {
 			if (modalState.type === type && modalState.index === index) {
+				readStatusManager(modalState.type, modalState.index)
 				onOpen()
 			}
 		}
@@ -52,13 +38,30 @@ export const MemoedCard = function Card({ item, index, type }) {
 	}, [modalState])
 	return (
 		<>
-			<CardBox cursor="pointer" onClick={onOpen}>
+			<CardBox
+				cursor="pointer"
+				onClick={() => {
+					readStatusManager(type, index)
+					onOpen()
+				}}
+			>
 				<Box backgroundImage={`${item.image}`} backgroundPosition="center" backgroundSize="cover" transition="all .5s ease" h="100%" _hover={{ transform: 'scale(1.2)' }}></Box>
 				<Box fontSize="1rem" w="100%" position="absolute" bottom="0" backgroundColor="rgba(222,222,222,.9)" px="1em" py=".5em">
 					<Text fontSize="1.2rem" fontWeight="700">
 						{item.title}
 					</Text>
 					<Text>{item.company}</Text>
+					<Box pos="absolute" right="1rem" bottom="0.5rem">
+						{localStorageGetter(type, index) ? (
+							<Box color="green.600" fontSize="1.5rem">
+								<AiFillCheckCircle />
+							</Box>
+						) : (
+							<Box color="red.600" fontSize="1.5rem">
+								<GiCancel />
+							</Box>
+						)}
+					</Box>
 				</Box>
 			</CardBox>
 			<Modal

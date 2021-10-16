@@ -1,14 +1,14 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Box } from '@chakra-ui/layout'
 import { MemoedCard } from './Card'
-import { modalOpenContext } from '../context/modalOpenContext'
 
 const AnimateBox = styled(Box)`
 	transition: flex 0.4s ease-in-out 0.1s, font-size 0.4s ease-in-out 0.1s;
 	padding: 5rem 1.5rem 0;
 	font-size: 3vw;
 	flex: 1;
+	overflow: hidden;
 	@media (max-width: 600px) {
 		font-size: 8vw;
 	}

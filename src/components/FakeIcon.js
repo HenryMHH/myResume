@@ -4,7 +4,7 @@ import { IoDocumentTextOutline } from 'react-icons/io5'
 
 export default function FakeIcon() {
 	return (
-		<Box display="flex" fontWeight="bold" fontSize="1.5em" my=".2rem" mx=".5rem" whiteSpace="nowrap">
+		<Box cursor="pointer" display="flex" fontWeight="bold" fontSize="1.5em" my=".2rem" mx=".5rem" whiteSpace="nowrap">
 			<Box transform="skewY(-10deg)" display="flex">
 				<Box transform="rotate(4deg)">亨</Box>
 				<Box transform="rotate(4deg)">利</Box>
